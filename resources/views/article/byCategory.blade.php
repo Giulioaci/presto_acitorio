@@ -20,3 +20,7 @@
           <a class="btn btn-dark my-5" href="{{ route('create.article') }}">Pubblica un articolo</a>
         </div>
       @endforelse
+    </div> 
+  </div> 
+</x-layout> 
+

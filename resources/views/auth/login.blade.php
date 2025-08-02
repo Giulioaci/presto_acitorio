@@ -19,10 +19,10 @@
                 </div>
                 <div class="row">
                     <div class="col-6">
-                      <button type="submit" class="btn btn-primary">Accedi</button>
+                      <button type="submit" class="btn btn-dark">Accedi</button>
                     </div>
                     <div class="col-6">
-                      <p>Non sei registrato? <a href="{{route('register')}}" class="btn btn-primary">Registrati!</a></p>
+                      <p>Non sei registrato? <a href="{{route('register')}}" class="btn btn-dark">Registrati!</a></p>
                     </div>
                 </div>
             </form>

@@ -27,10 +27,10 @@
                 </div>
                 <div class="row">
                     <div class="col-6">
-                      <button type="submit" class="btn btn-primary">Registrati</button>
+                     <button type="submit" class="btn btn-dark">Registrati</button>
                     </div>
                     <div class="col-6">
-                      <p>Hai già un account? <a href="{{route('login')}}" class="btn btn-primary">Fai il login!</a></p>
+                      <p>Hai già un account? <a href="{{route('login')}}" class="btn btn-dark">Fai il login!</a></p>
                     </div>
                 </div>
             </form>
