@@ -1,5 +1,10 @@
 <form wire:submit="store">
   @csrf
+  @if (session()->has('success'))
+      <div class="alert alert-success text-center mt-3">
+        {{ session('success') }}
+      </div>
+    @endif
     <div class="mb-3">
         <label for="title" class="form-label">Titolo:</label>
         <input type="text" class="form-control @error('title') is-invalid @enderror" id='title' wire:model.blur="title">
@@ -34,9 +39,4 @@
     <div class="d-flex justify-content-center mt-3">
        <button type="submit" class="btn btn-dark">Crea</button>
     </div>
-    @if (session()->has('success'))
-      <div class="alert alert-success text-center mt-3">
-        {{ session('success') }}
-      </div>
-    @endif
 </form>

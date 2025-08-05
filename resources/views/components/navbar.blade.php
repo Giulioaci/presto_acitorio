@@ -43,7 +43,6 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
             <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
-            <li><a class="dropdown-item" href="{{route('create.article')}}">Crea un articolo</a></li>
             <li><a class="dropdown-item" href="{{route('article.index')}}">Tutti gli articoli</a></li>
           </ul>
         </li>
@@ -51,10 +50,10 @@
           @auth
            @if (Auth::user()->is_revisor)
             <li class="nav-item">
-            <a class="nav-link btn btn-outline-success btn-sm position-relative w-sm-25"
+            <a class="nav-link btn-sm position-relative w-sm-25"
                href="{{ route('revisor.index') }}">
                Revisore
-               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+               <span class="position-absolute top-0 start-100 badge rounded-pill bg-danger">
                     {{ \App\Models\Article::toBeRevisedCount() }}
                </span>
             </a>

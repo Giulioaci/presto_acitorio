@@ -8,10 +8,10 @@
     @endif
 
     <div class="container-fluid pt-5">
-        <div class="row">
+        <div class="row py-5 justify-content-center align-items-center text-center">
             <div class="col-3">
-                <div class="rounded shadow bg-body-secondary">
-                    <h1 class="display-5 text-center pb-2">
+                <div>
+                    <h1 class="display-70 text-center pb-2">
                         Revisor dashboard
                     </h1>
                 </div>

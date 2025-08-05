@@ -1,4 +1,9 @@
-.btn{
-    background-color: white;
-    color: antiquewhite;
+.btn-primary {
+  background-color: #033362;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
 }
+
