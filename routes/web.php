@@ -25,6 +25,8 @@ Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->mid
 
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->middleware('auth')->name('make.revisor');
 
+Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('article.search');
+
 
 
 

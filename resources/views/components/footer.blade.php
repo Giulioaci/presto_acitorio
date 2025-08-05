@@ -4,7 +4,7 @@
       <div class="col-md-4 mb-3">
         <h5>Presto.it</h5>
       <div>
-       <a href="{{ route('become.revisor') }}" class="btn-primary">Diventa revisore</a>
+       <a href="{{ route('become.revisor') }}" class="btn btn-primary">Diventa revisore</a>
       </div>
       </div>
 
