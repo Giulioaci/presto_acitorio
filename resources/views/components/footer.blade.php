@@ -1,5 +1,5 @@
-<footer class="bg-dark text-white pt-4 pb-2">
-  <div class="container">
+<footer class="bg-dark text-white pt-2 pb-1">
+ <div class="container">
     <div class="row">
       <div class="col-md-4 mb-3">
         <h5>Presto.it</h5>

@@ -1,2 +1,25 @@
+.img-preview {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.card.card-w {
+  border-radius: 15px !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+  overflow: hidden !important;
+}
+
+.card.card-w img.card-img-top {
+  border-top-left-radius: 15px !important;
+  border-top-right-radius: 15px !important;
+}
+
+
 
 

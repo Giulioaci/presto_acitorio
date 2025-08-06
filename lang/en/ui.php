@@ -41,6 +41,9 @@ return
     'rifiuta' => 'Refuse',
     'nessunarticolodarevisionare' => 'No article to review',
     'tornaallhomepage' => 'Return to the homepage',
-
+    'nonsonoancorastaticreatiarticoli' => 'Articles have not yet been created.',
+    'immagini'=>'Images',
+    'anteprimaimmagini' => 'Image preview',
 ];
+
 

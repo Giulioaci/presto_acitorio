@@ -41,4 +41,7 @@ return
     'rifiuta' => 'Rechaza',
     'nessunarticolodarevisionare' => 'Ningún artículo para revisar',
     'tornaallhomepage' => 'Regresar a la página principal',
+    'nonsonoancorastaticreatiarticoli' => 'No se han creado artículos aún.',
+    'immagini'=>'Imágenes',
+    'anteprimaimmagini' => 'Vista previa de imágenes',
 ];

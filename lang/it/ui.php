@@ -41,4 +41,7 @@ return
     'rifiuta' => 'Rifiuta',
     'nessunarticolodarevisionare' => 'Nessun articolo da revisionare',
     'tornaallhomepage' => 'Torna all homepage',
+    'nonsonoancorastaticreatiarticoli' => 'Non sono ancora stati creati articoli',
+    'immagini'=>'Immagini',
+    'anteprimaimmagini' => 'Anteprima immagini',
 ];

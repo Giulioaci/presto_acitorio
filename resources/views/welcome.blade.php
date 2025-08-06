@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid">
+    <div class="container-fluid vh-300">
         <div class="row h-75 align-items-center justify-content-center mb-3">
             <div class="col-12 text-center">
                 <h1 class="display-4">Presto.it</h1>
@@ -28,7 +28,7 @@
               @empty
              <div class="col-12">
               <h3 class="text-center">
-               Non sono ancora stati creati articoli
+            {{__('ui.nonsonoancorastaticreatiarticoli')}}
               </h3>
             </div>
              @endforelse

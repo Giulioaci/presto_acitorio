@@ -21,13 +21,21 @@
             <div class="row justify-content-center pt-5">
                 <div class="col-md-8">
                     <div class="row justify-content-center">
-                        @for ($i = 0; $i < 6; $i++)
-                        <div class="col-6 col-md-4 mb-4 text-center">
-                            <img src="https://picsum.photos/300"
-                                 class="img-fluid rounded shadow"
-                                 alt="immagine segnaposto" />
-                        </div>
-                        @endfor
+                        @if ($article_to_check->images->count())
+                            @foreach ($article_to_check->images as $key => $image)
+                                <div class="col-6 col-md-4 mb-4">
+                                    <img src="{{ Storage::url($image->path) }}" class="img-fluid rounded shadow"
+                                         alt="Immagine {{ $key + 1 }} dell’articolo '{{ $article_to_check->title }}'">
+                                </div>
+                            @endforeach
+                        @else
+                            @for ($i = 0; $i < 6; $i++)
+                                <div class="col-6 col-md-4 mb-4 text-center">
+                                    <img src="https://picsum.photos/300" alt="immagine segnaposto"
+                                         class="img-fluid rounded shadow">
+                                </div>
+                            @endfor
+                        @endif
                     </div>
                 </div>
 
@@ -35,21 +43,22 @@
                     <h1>{{ $article_to_check->title }}</h1>
                     <h3>Autore: {{ $article_to_check->user->name }}</h3>
                     <h4>{{ $article_to_check->price }}€</h4>
-                   <h4 class="fst-italic text-muted">
-                   {{ $article_to_check->category ? __('ui.' . Str::slug($article_to_check->category->name)) : __('ui.senza_categoria') }}</h4>
+                    <h4 class="fst-italic text-muted">
+                        {{ $article_to_check->category ? __('ui.' . Str::slug($article_to_check->category->name)) : __('ui.senza_categoria') }}
+                    </h4>
                     <p class="h6">{{ $article_to_check->description }}</p>
 
                     <div class="d-flex pb-4 justify-content-around">
-                        <form action="{{route('reject',['article' => $article_to_check])}}" method="POST">
+                        <form action="{{ route('reject', ['article' => $article_to_check]) }}" method="POST">
                             @csrf
-                             @method('PATCH')
-                            <button class="btn btn-danger py-2 px-5 fw-bold">{{__('ui.rifiuta')}}</button>
+                            @method('PATCH')
+                            <button class="btn btn-danger py-2 px-5 fw-bold">{{ __('ui.rifiuta') }}</button>
                         </form>
 
-                        <form action="{{route('accept',['article' => $article_to_check])}}" method="POST">
+                        <form action="{{ route('accept', ['article' => $article_to_check]) }}" method="POST">
                             @csrf
-                             @method('PATCH')
-                            <button class="btn btn-success py-2 px-5 fw-bold">{{__('ui.accetta')}}</button>
+                            @method('PATCH')
+                            <button class="btn btn-success py-2 px-5 fw-bold">{{ __('ui.accetta') }}</button>
                         </form>
                     </div>
                 </div>
@@ -57,8 +66,8 @@
             @else
             <div class="row justify-content-center align-items-center height-custom text-center">
                 <div class="col-12">
-                    <h1 class="fst-italic display-4">{{__('ui.nessunarticolodarevisionare')}}</h1>
-                    <a href="{{ route('homepage') }}" class="mt-5 btn btn-success">{{__('ui.tornaallhomepage')}}</a>
+                    <h1 class="fst-italic display-4">{{ __('ui.nessunarticolodarevisionare') }}</h1>
+                    <a href="{{ route('homepage') }}" class="mt-5 btn btn-success">{{ __('ui.tornaallhomepage') }}</a>
                 </div>
             </div>
             @endif
