@@ -10,15 +10,15 @@
           <a class="nav-link active" aria-current="page">Presto.it</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route ('homepage')}}">Home</a>
+          <a class="nav-link" href="{{route ('homepage')}}">{{__('ui.Home')}}</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Categorie
+          {{__('ui.Categorie')}}
           </a>
         <ul class="dropdown-menu">
           @foreach ($categories as $category)
-          <li><a class="dropdown-item" href="{{ route('byCategory', ['category' => $category]) }}">{{ $category->name }}</a></li>
+          <li><a class="dropdown-item" href="{{ route('byCategory', ['category' => $category]) }}">{{ __('ui.' . Str::slug($category->name)) }}</a></li>
           @if (!$loop->last)
           <hr class="dropdown-divider">
           @endif
@@ -28,7 +28,7 @@
         @auth
          <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Ciao,{{Auth::user()->name}}!
+           {{__('ui.Hello')}},{{Auth::user()->name}}!
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit()";>Logout</a></li>
@@ -38,12 +38,12 @@
         @else
          <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Ciao, Ospite
+            {{__('ui.Hello')}}, Ospite
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
-            <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
-            <li><a class="dropdown-item" href="{{route('article.index')}}">Tutti gli articoli</a></li>
+            <li><a class="dropdown-item" href="{{route('register')}}">{{__('ui.Registrati')}}</a></li>
+            <li><a class="dropdown-item" href="{{route('article.index')}}">{{__('ui.AllArticles')}}</a></li>
           </ul>
         </li>
         @endauth
@@ -52,7 +52,7 @@
             <li class="nav-item">
             <a class="nav-link btn-sm position-relative w-sm-25"
                href="{{ route('revisor.index') }}">
-               Revisore
+               {{__('ui.Revisore')}}
                <span class="position-absolute top-0 start-100 badge rounded-pill bg-danger">
                     {{ \App\Models\Article::toBeRevisedCount() }}
                </span>
@@ -61,14 +61,17 @@
           @endif
         @endauth
       </ul>
-    </div>
     <form class="d-flex ms-auto" role="search" action="{{ route('article.search') }}" method="GET">
          <div class="input-group">
           <input type="search" name="query" class="form-control" placeholder="Search" aria-label="search">
           <button type="submit" class="input-group-text btn btn-primary" id="basic-addon2">
-            Cerca articolo
+            {{__('ui.Cercaarticolo')}}
           </button>
          </div>
-        </form>
+        </div>
+      </form>
+       <x-_locale lang="it" />
+       <x-_locale lang="en" />
+       <x-_locale lang="es" />
   </div>
 </nav>

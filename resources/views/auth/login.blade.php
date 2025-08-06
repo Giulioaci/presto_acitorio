@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h1 class="display-4 text-center">Accedi</h1>
+                <h1 class="display-4 text-center">{{__('ui.Accedi')}}</h1>
             </div>
         </div>
         <div class="row justify-content-center">
@@ -19,10 +19,10 @@
                 </div>
                 <div class="row">
                     <div class="col-6">
-                      <button type="submit" class="btn btn-dark">Accedi</button>
+                      <button type="submit" class="btn btn-dark">{{__('ui.Accedi')}}</button>
                     </div>
                     <div class="col-6">
-                      <p>Non sei registrato? <a href="{{route('register')}}" class="btn btn-dark">Registrati!</a></p>
+                      <p>Non sei registrato? <a href="{{route('register')}}" class="btn btn-dark">{{__('ui.Registrati')}}</a></p>
                     </div>
                 </div>
             </form>

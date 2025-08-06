@@ -4,11 +4,11 @@
         <h4 class="card-title">{{ $article->title }}</h4>
         <h6 class="card-subtitle text-body-secondary">{{ $article->price }} €</h6>
         <div class="d-flex justify-content-evenly align-items-center mt-5">
-            <a href="{{ route('article.show', compact('article')) }}" class="btn btn-dark">Dettaglio</a>
+            <a href="{{ route('article.show', compact('article')) }}" class="btn btn-dark">{{__('ui.Dettaglio')}}</a>
 
             @if ($article->category)
                 <a href="{{ route('byCategory', ['category' => $article->category->id]) }}" class="btn btn-dark">
-                    {{ $article->category->name }}
+                    {{ __('ui.' . Str::slug($article->category->name)) }}
                 </a>
             @else
                 <span class="btn btn-outline-secondary disabled">Senza categoria</span>
