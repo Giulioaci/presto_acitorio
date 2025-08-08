@@ -4,7 +4,7 @@ return
     'Hello' => 'Hola',
     'AllArticles' => 'Todos los artículos',
     'Home' => 'Página de inicio',
-    'Publicaunarticolo' => 'Publica un artículo',
+    'Pubblicaunarticolo' => 'Publica un artículo',
     'Seguici' => 'Síguenos',
     'Collegamenti' =>'Enlaces',
     'Categorie' => 'Categorías',

@@ -17,7 +17,7 @@
                 @endif
 
                 @auth
-                    <a class="btn btn-dark mt-3" href="{{ route('create.article') }}">{{__('ui.Publicaunarticolo')}}</a>
+                    <a class="btn btn-dark mt-3" href="{{ route('create.article') }}">{{__('ui.Pubblicaunarticolo')}}</a>
                 @endauth
             </div>
             <div class="row height-custom justify-content-center align-items-center py-5">

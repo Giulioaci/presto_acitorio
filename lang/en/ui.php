@@ -4,7 +4,7 @@ return
     'Hello' => 'Hello',
     'AllArticles' => 'All the articles',
     'Home' => 'Home',
-    'Publicaunarticolo' => 'Publish an article',
+    'Pubblicaunarticolo' => 'Publish an article',
     'Seguici' => 'Follow us',
     'Collegamenti' => 'Connections',
     'Categorie' => 'Category',

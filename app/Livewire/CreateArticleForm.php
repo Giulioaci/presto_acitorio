@@ -7,6 +7,8 @@ use Livewire\Component;
 use App\Models\Category;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File; 
+use App\Jobs\ResizeImage; 
 
 class CreateArticleForm extends Component
 {    
@@ -41,25 +43,23 @@ class CreateArticleForm extends Component
             'price' => $this->price,
             'category_id' => $this->category,
             'user_id' => Auth::id(),
-            
-           
-
         ]);
 
-         if (count($this->images) > 0) {
-         foreach ($this->images as $image) {
-            $this->article->images()->create([
-            'path' => $image->store('images', 'public')
-            ]);
+        if (count($this->images) > 0) {
+            foreach ($this->images as $image) {
+                $newFileName = 'articles/' . $this->article->id;
+                $newImage = $this->article->images()->create([
+                    'path' => $image->store($newFileName, 'public')
+                ]);
+                dispatch(new ResizeImage($newImage->path, 1000, 1000));
+            }
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
-    }
 
         session()->flash('success', 'Articolo creato correttamente');
 
-        
-        $this->reset(['title', 'description', 'price', 'category']);
+        $this->cleanForm();
     }
-
 
     public function mount()
     {
@@ -92,13 +92,11 @@ class CreateArticleForm extends Component
     }
 
     protected function cleanForm()
-  {
-    $this->title = '';
-    $this->description = '';
-    $this->category = '';
-    $this->price = '';
-    $this->images = [];
-  }
-
+    {
+        $this->title = '';
+        $this->description = '';
+        $this->category = '';
+        $this->price = '';
+        $this->images = [];
+    }
 }
-
