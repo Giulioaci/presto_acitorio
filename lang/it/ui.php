@@ -3,7 +3,6 @@ return
 [
     'Hello' => 'Ciao',
     'AllArticles' => 'Tutti gli articoli',
-    'Home' => 'Home',
     'Pubblicaunarticolo' => 'Pubblica un articolo',
     'Seguici' => 'Seguici',
     'Collegamenti'=> 'Collegamenti',
@@ -44,4 +43,5 @@ return
     'nonsonoancorastaticreatiarticoli' => 'Non sono ancora stati creati articoli',
     'immagini'=>'Immagini',
     'anteprimaimmagini' => 'Anteprima immagini',
+    'vuoilavorareconnoi' => 'Vuoi lavorare con noi?'
 ];

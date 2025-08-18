@@ -4,6 +4,7 @@
       <div class="col-md-4 mb-3">
         <h5>Presto.it</h5>
       <div>
+        <h6>{{__('ui.vuoilavorareconnoi')}}</h6>
        <a href="{{ route('become.revisor') }}" class="btn btn-primary">{{__('ui.Diventarevisore')}}</a>
       </div>
       </div>

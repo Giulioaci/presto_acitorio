@@ -10,8 +10,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
   </head>
       @livewireStyles
-  <body style="background-image: url('{{ asset('images/sfondo.jpg') }}'); 
-             background-size: cover; background-repeat: no-repeat;">
+  <body class="colorbody">
     
   <x-navbar />
   

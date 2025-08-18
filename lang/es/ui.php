@@ -3,7 +3,6 @@ return
 [
     'Hello' => 'Hola',
     'AllArticles' => 'Todos los artículos',
-    'Home' => 'Página de inicio',
     'Pubblicaunarticolo' => 'Publica un artículo',
     'Seguici' => 'Síguenos',
     'Collegamenti' =>'Enlaces',
@@ -19,7 +18,7 @@ return
     'Inserisciiltuoarticolo' => 'Inserta tu artículo',
     'elettronica' => 'Electrónica',
     'abbigliamento' => 'Ropa',
-    'saluteebellezza' => 'Salud y Belleza',
+    'salute-e-bellezza' => 'Salud y Belleza',
     'casa-e-giardino' => 'Hogar y Jardín',
     'giocattoli' => 'Juguetes',
     'sport' => 'Deportes',
@@ -44,4 +43,5 @@ return
     'nonsonoancorastaticreatiarticoli' => 'No se han creado artículos aún.',
     'immagini'=>'Imágenes',
     'anteprimaimmagini' => 'Vista previa de imágenes',
+    'vuoilavorareconnoi' => 'Quieres trabajar con nosotros?'
 ];

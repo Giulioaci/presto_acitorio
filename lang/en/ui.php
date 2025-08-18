@@ -3,7 +3,6 @@ return
 [
     'Hello' => 'Hello',
     'AllArticles' => 'All the articles',
-    'Home' => 'Home',
     'Pubblicaunarticolo' => 'Publish an article',
     'Seguici' => 'Follow us',
     'Collegamenti' => 'Connections',
@@ -44,6 +43,7 @@ return
     'nonsonoancorastaticreatiarticoli' => 'Articles have not yet been created.',
     'immagini'=>'Images',
     'anteprimaimmagini' => 'Image preview',
+    'vuoilavorareconnoi' => 'Do you want to work with us?'
 ];
 
 
