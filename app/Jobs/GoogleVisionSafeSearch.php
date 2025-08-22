@@ -26,61 +26,65 @@ class GoogleVisionSafeSearch implements ShouldQueue
 
     public function handle(): void
     {
-        $imageModel = Image::find($this->article_image_id);
-        if (!$imageModel) {
-            return;
-        }
-
-        $imagePath = storage_path('app/public/' . $imageModel->path);
-        if (!file_exists($imagePath)) {
-            return;
-        }
-
-        $imageContent = file_get_contents($imagePath);
-
-        putenv('GOOGLE_APPLICATION_CREDENTIALS=' . env('GOOGLE_APPLICATION_CREDENTIALS'));
-
-        $client = new ImageAnnotatorClient();
-
-       
-        $visionImage = (new VisionImage())->setContent($imageContent);
-
-        $feature = (new Feature())->setType(Feature\Type::SAFE_SEARCH_DETECTION);
-
-        $request = (new AnnotateImageRequest())
-            ->setImage($visionImage)
-            ->setFeatures([$feature]);
-
-        $response = $client->batchAnnotateImages([$request]);
-        $client->close();
-
-        $safe = $response->getResponses()[0]->getSafeSearchAnnotation();
-
-        if (!$safe) {
-            return;
-        }
-
-        $adult = $safe->getAdult();
-        $medical = $safe->getMedical();
-        $spoof = $safe->getSpoof();
-        $violence = $safe->getViolence();
-        $racy = $safe->getRacy();
-
-        $likelihoodName = [
-            'text-secondary bi bi-circle-fill',        
-            'text-success bi bi-check-circle-fill',    
-            'text-success bi bi-check-circle-fill',    
-            'text-warning bi bi-exclamation-circle-fill', 
-            'text-warning bi bi-exclamation-circle-fill', 
-            'text-danger bi bi-dash-circle-fill',      
-        ];
-
-        $imageModel->adult = $likelihoodName[$adult] ?? null;
-        $imageModel->spoof = $likelihoodName[$spoof] ?? null;
-        $imageModel->racy = $likelihoodName[$racy] ?? null;
-        $imageModel->medical = $likelihoodName[$medical] ?? null;
-        $imageModel->violence = $likelihoodName[$violence] ?? null;
-
-        $imageModel->save();
+    $imageModel = Image::find($this->article_image_id);
+    if (!$imageModel) {
+        return;
     }
+
+    $imagePath = storage_path('app/public/' . $imageModel->path);
+    if (!file_exists($imagePath)) {
+        return;
+    }
+
+    $imageContent = file_get_contents($imagePath);
+
+    putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
+
+    $client = new ImageAnnotatorClient();
+
+    $visionImage = (new VisionImage())->setContent($imageContent);
+    $feature = (new Feature())->setType(Feature\Type::SAFE_SEARCH_DETECTION);
+    $request = (new AnnotateImageRequest())->setImage($visionImage)->setFeatures([$feature]);
+    $response = $client->batchAnnotateImages([$request]);
+    $client->close();
+
+    $safe = $response->getResponses()[0]->getSafeSearchAnnotation();
+    if (!$safe) {
+        return;
+    }
+
+    $adult = $safe->getAdult();
+    $medical = $safe->getMedical();
+    $spoof = $safe->getSpoof();
+    $violence = $safe->getViolence();
+    $racy = $safe->getRacy();
+
+    $likelihoodName = [
+        'text-secondary bi bi-circle-fill',        
+        'text-success bi bi-check-circle-fill',    
+        'text-success bi bi-check-circle-fill',    
+        'text-warning bi bi-exclamation-circle-fill', 
+        'text-warning bi bi-exclamation-circle-fill', 
+        'text-danger bi bi-dash-circle-fill',      
+    ];
+
+    
+    $threshold = 3;
+
+    
+    $filterLikelihood = function($value) use ($threshold, $likelihoodName) {
+        if ($value >= $threshold) {
+            return $likelihoodName[$value] ?? null;
+        }
+        return null; 
+    };
+
+    $imageModel->adult = $filterLikelihood($adult);
+    $imageModel->spoof = $filterLikelihood($spoof);
+    $imageModel->racy = $filterLikelihood($racy);
+    $imageModel->medical = $filterLikelihood($medical);
+    $imageModel->violence = $filterLikelihood($violence);
+
+    $imageModel->save();
+}
 }
