@@ -43,5 +43,6 @@ return
     'nonsonoancorastaticreatiarticoli' => 'Non sono ancora stati creati articoli',
     'immagini'=>'Immagini',
     'anteprimaimmagini' => 'Anteprima immagini',
-    'vuoilavorareconnoi' => 'Vuoi lavorare con noi?'
+    'vuoilavorareconnoi' => 'Vuoi lavorare con noi?',
+    'ultimiarticolicaricati'=>'Ultimi articoli caricati'
 ];

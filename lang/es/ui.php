@@ -43,5 +43,6 @@ return
     'nonsonoancorastaticreatiarticoli' => 'No se han creado artículos aún.',
     'immagini'=>'Imágenes',
     'anteprimaimmagini' => 'Vista previa de imágenes',
-    'vuoilavorareconnoi' => 'Quieres trabajar con nosotros?'
+    'vuoilavorareconnoi' => 'Quieres trabajar con nosotros?',
+    'ultimiarticolicaricati'=> 'últimos artículos cargados'
 ];

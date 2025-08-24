@@ -17,7 +17,7 @@
           <h3>
            {{__('ui.Nonsonoancorastaticreatiarticoliperquestacategoria!')}}
           </h3>
-          <a class="btn btn-dark my-5" href="{{ route('create.article') }}">{{__('ui.Publicaunarticolo')}}</a>
+          <a class="btn btn-dark my-5" href="{{ route('create.article') }}">{{__('ui.Pubblicaunarticolo')}}</a>
         </div>
       @endforelse
     </div> 

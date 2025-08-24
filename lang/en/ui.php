@@ -29,7 +29,7 @@ return
     'Nonsonoancorastaticreatiarticoliperquestacategoria!' => 'No articles have been created for this category yet!',
     'Articolidellacategoria' => 'Articles of the category',
     'Risultatiperlaricerca' => 'Results for the search',
-    'Nessunarticolocorrispondeallatuaricerca' => 'No article matches your search,',
+    'Nessunarticolocorrispondeallatuaricerca' => 'No article matches your search',
     'titolo' => 'Title',
     'descrizione' => 'Description',
     'prezzo' => 'Price',
@@ -43,7 +43,8 @@ return
     'nonsonoancorastaticreatiarticoli' => 'Articles have not yet been created.',
     'immagini'=>'Images',
     'anteprimaimmagini' => 'Image preview',
-    'vuoilavorareconnoi' => 'Do you want to work with us?'
+    'vuoilavorareconnoi' => 'Do you want to work with us?',
+    'ultimiarticolicaricati'=> 'latest articles uploaded'
 ];
 
 
