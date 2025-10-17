@@ -2,17 +2,17 @@
     <div class="container-fluid ">
         <div class="row py-5 justify-content-center align-items-center text-center">
             <div class="col-12">
-                <h1 class="display-1 ">{{__('ui.Risultatiperlaricerca')}}"<span class="fst-italic">{{ $query }}</span>"</h1>
+                <h1 class="py-5 charming-title">{{__('ui.Risultatiperlaricerca')}}"<span class="fst-italic">{{ $query }}</span>"</h1>
             </div>
         </div>
         <div class="row height-custom justify-content-center align-items-center py-5">
             @forelse ($articles as $article)
-                <div class="col-12 col-md-3 ">
+                <div class="col-12 col-md-3 py-5 charming-title">
                     <x-card :article="$article" />
                 </div>
             @empty
                 <div class="col-12">
-                    <h3 class="text-center">
+                    <h3 class="py-5 charming-title">
                         {{__('ui.Nessunarticolocorrispondeallatuaricerca')}}
                     </h3>
                 </div>

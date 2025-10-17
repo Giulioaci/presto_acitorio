@@ -67,7 +67,7 @@
                 <p class="fst-italic text-danger">{{ $message }}</p>
             @enderror
         </div>
-        <div class="d-flex justify-content-center mt-4 mb-5 pb-5">
+        <div class="justify-content-center py-5 charming-title">
             <button type="submit" class="btn btn-dark">{{ __('ui.crea') }}</button>
         </div>
     </form>

@@ -44,5 +44,14 @@ return
     'immagini'=>'Immagini',
     'anteprimaimmagini' => 'Anteprima immagini',
     'vuoilavorareconnoi' => 'Vuoi lavorare con noi?',
-    'ultimiarticolicaricati'=>'Ultimi articoli caricati'
+    'ultimiarticolicaricati'=>'Ultimi articoli caricati dagli utenti',
+    'Scoprimigliaiadioffertesumisuraperiltuobusiness'=> 'Scopri migliaia di offerte su misura per il tuo business',
+    'prodotti'=>'Prodotti',
+    'fornitori'=>'Fornitori',
+    'categoriediprodotti'=>'Categorie di prodotti',
+    'Paesieregioni'=>'Paesi e regioni',
+    'Piùdi50categorieperaiutartinellatuaricercaonline'=>'Più di 50 categorie per aiutarti nella tua ricerca online',
+    'Nonhaitempopercercareconfrontareapriremilleschedeeperdertitrasitituttiuguali'=>'Non hai tempo per cercare, confrontare, aprire mille schede e perderti tra siti tutti uguali?',
+    'SuPrestoittrovioltre50categoriepensatepersemplificartilavita.'=>'Su Presto.it trovi oltre 50 categorie pensate per semplificarti la vita.',
+    'Sonoordinateaggiornateeprogettateperguidartiesattamentedovevuoiandaresenzasprechiditempo.'=>'Sono ordinate, aggiornate e progettate per guidarti esattamente dove vuoi andare, senza sprechi di tempo.',
 ];

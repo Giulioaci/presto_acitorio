@@ -51,6 +51,8 @@
                 <form action="{{route('logout')}}" method="POST" id="form-logout" class="d-none">
                   @csrf
                 </form>
+                <li><a class="dropdown-item" href="{{ route('create.article') }}">{{__('ui.Pubblicaunarticolo')}}</a>
+              </li>
               </li>
             </ul>
           </li>
@@ -83,17 +85,20 @@
         @endauth
       </ul>
 
-     
-      <form class="d-flex ms-auto" role="search" action="{{ route('article.search') }}" method="GET">
-        <div class="input-group">
-          <input type="search" name="query" class="form-control" placeholder="Search" aria-label="search">
-          <button type="submit" class="input-group-text btn btn-primary" id="basic-addon2">
-            {{ __('ui.Cercaarticolo') }}
-          </button>
-        </div>
-      </form>
+     <form class="d-flex ms-auto align-items-center search-form" role="search" action="{{ route('article.search') }}" method="GET">
+     <input 
+    type="search" 
+    name="query" 
+    class="search-input" 
+    placeholder="{{ __('ui.Cercaarticolo') }}" 
+    aria-label="search">
+    <button type="submit" class="search-button">
+    <i class="bi bi-search fs-5"></i>
+    </button>
+    </form>
 
-      
+
+
       <x-_locale lang="it" />
       <x-_locale lang="en" />
       <x-_locale lang="es" />

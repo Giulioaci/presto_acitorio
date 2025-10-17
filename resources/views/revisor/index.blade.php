@@ -11,7 +11,7 @@
         <div class="row py-5 justify-content-center align-items-center text-center">
             <div class="col-3">
                 <div>
-                    <h1 class="display-70 text-center pb-2">
+                    <h1 class="py-4 charming-title">
                         Revisor dashboard
                     </h1>
                 </div>
@@ -104,12 +104,15 @@
             @else
                 <div class="row justify-content-center align-items-center height-custom text-center">
                     <div class="col-12">
-                        <h1 class="fst-italic display-4">{{ __('ui.nessunarticolodarevisionare') }}</h1>
+                        <h1 class="py-4 charming-title">{{ __('ui.nessunarticolodarevisionare') }}</h1>
                         <a href="{{ route('homepage') }}" class="mt-5 btn btn-success">{{ __('ui.tornaallhomepage') }}</a>
                     </div>
                 </div>
             @endif
         </div>
+    </div>
+    <div class="text-center mt-4">
+        <i class="bi bi-credit-card" style="font-size: 13rem;"></i>
     </div>
 </x-layout>
 

@@ -1,12 +1,12 @@
-<div class="card mx-auto card-w shadow text-center mb-3">
+<div class="card mx-auto card-w text-center mb-3 card-transparent">
     <img src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(1000, 1000) : 'https://picsum.photos/200' }}" 
          class="card-img-top" alt="Immagine dell'articolo {{ $article->title }}">
     
     <div class="card-body">
-        <h4 class="card-title">{{ $article->title }}</h4>
-        <h6 class="card-subtitle text-body-secondary">{{ $article->price }} €</h6>
+        <h4 class="card-title text-dark">{{ $article->title }}</h4>
+        <h6 class="card-subtitle text-dark">{{ $article->price }} €</h6>
 
-        <div class="d-flex justify-content-evenly align-items-center mt-5">
+        <div class="d-flex justify-content-evenly align-items-center mt-4">
             <a href="{{ route('article.show', compact('article')) }}" class="btn btn-dark">{{ __('ui.Dettaglio') }}</a>
 
             @if ($article->category)
@@ -19,5 +19,10 @@
         </div>
     </div>
 </div>
+
+
+
+
+
 
 

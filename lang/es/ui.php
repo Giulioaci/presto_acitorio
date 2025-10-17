@@ -44,5 +44,15 @@ return
     'immagini'=>'Imágenes',
     'anteprimaimmagini' => 'Vista previa de imágenes',
     'vuoilavorareconnoi' => 'Quieres trabajar con nosotros?',
-    'ultimiarticolicaricati'=> 'últimos artículos cargados'
+    'ultimiarticolicaricati'=> 'últimos artículos cargados',
+    'Scoprimigliaiadioffertesumisuraperiltuobusiness'=> 'Descubre miles de ofertas adaptadas a tu negocio',
+    'prodotti'=>'Productos',
+    'fornitori'=>'Proveedores',
+    'categoriediprodotti'=>'Categorías de productos',
+    'Paesieregioni'=>'Países y regiones',
+    'Piùdi50categorieperaiutartinellatuaricercaonline'=>'Más de 50 categorías para ayudarte con tu búsqueda en línea',
+    'Nonhaitempopercercareconfrontareapriremilleschedeeperdertitrasitituttiuguali'=>'No tienes tiempo para buscar, comparar, abrir mil pestañas y perderte entre sitios idénticos?',
+    'SuPrestoittrovioltre50categoriepensatepersemplificartilavita.'=>'En Presto.it encontrarás más de 50 categorías diseñadas para hacerte la vida más fácil.',
+    'Sonoordinateaggiornateeprogettateperguidartiesattamentedovevuoiandaresenzasprechiditempo.'=>'Están organizados, actualizados y diseñados para llevarte exactamente a donde quieres ir, sin perder tiempo.',
 ];
+

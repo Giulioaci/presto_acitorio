@@ -44,7 +44,16 @@ return
     'immagini'=>'Images',
     'anteprimaimmagini' => 'Image preview',
     'vuoilavorareconnoi' => 'Do you want to work with us?',
-    'ultimiarticolicaricati'=> 'latest articles uploaded'
+    'ultimiarticolicaricati'=> 'latest articles uploaded',
+    'Scoprimigliaiadioffertesumisuraperiltuobusiness'=> 'Discover thousands of offers tailored for your business',
+    'prodotti'=>'Products',
+    'fornitori'=>'Suppliers',
+    'categoriediprodotti'=>'Product categories',
+    'Paesieregioni'=>'Countries and regions',
+    'Piùdi50categorieperaiutartinellatuaricercaonline'=>'More than 50 categories to help you with your online search',
+    'Nonhaitempopercercareconfrontareapriremilleschedeeperdertitrasitituttiuguali'=>'Dont have time to search, compare, open a thousand tabs, and get lost among identical sites?',
+    'SuPrestoittrovioltre50categoriepensatepersemplificartilavita.'=>'On Presto.it you ll find over 50 categories designed to make your life easier.',
+    'Sonoordinateaggiornateeprogettateperguidartiesattamentedovevuoiandaresenzasprechiditempo.'=>'They re organized, up-to-date, and designed to get you exactly where you want to go, without wasting time.',
 ];
 
 
