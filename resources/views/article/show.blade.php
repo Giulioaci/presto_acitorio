@@ -32,18 +32,23 @@
           <img src="https://picsum.photos/400" alt="Nessuna foto inserita dall’utente" class="img-fluid rounded shadow">
         @endif
       </div>
-      <div class="col-12 col-md-6 mb-3 height-custom text-center py-5 charming-title"">
-        <h2 class="display-5">
-          <span></span> {{ $article->title }}
-        </h2>
-        <div class="d-flex flex-column justify-content-center h-75 py-5 charming-title" ">
+      <div class="col-12 col-md-6 mb-3 height-custom text-center py-5 charming-title">
+        <h2 class="display-5">{{ $article->title }}</h2>
+        <div class="d-flex flex-column justify-content-center h-75 py-5 charming-title">
           <h4 class="fw-bold">{{ __('ui.prezzo') }}: {{ $article->price }} €</h4>
           <h5>{{ __('ui.descrizione') }}:</h5>
           <p>{{ $article->description }}</p>
         </div>
+        <div class="d-flex justify-content-center mt-4">
+          <a href="#" class="btn btn-danger btn-lg">
+            Acquista
+          </a>
+        </div>
+
       </div>
     </div>
   </div>
 </x-layout>
+
 
       

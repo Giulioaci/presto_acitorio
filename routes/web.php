@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
@@ -28,6 +29,11 @@ Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->m
 Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('article.search');
 
 Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
+
+Route::middleware(['auth'])->group(function () {Route::get('/area-personale', [UserController::class, 'dashboard'])->name('user.dashboard');
+    
+});
+
 
 
 

@@ -51,8 +51,8 @@
                 <form action="{{route('logout')}}" method="POST" id="form-logout" class="d-none">
                   @csrf
                 </form>
-                <li><a class="dropdown-item" href="{{ route('create.article') }}">{{__('ui.Pubblicaunarticolo')}}</a>
               </li>
+              <li><a class="dropdown-item" href="{{ route('user.dashboard') }}">Area personale</a></li>
               </li>
             </ul>
           </li>
