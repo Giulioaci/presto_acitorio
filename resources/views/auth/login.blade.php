@@ -4,7 +4,7 @@
             {{-- Titolo --}}
             <div class="row justify-content-center">
                 <div class="col-12">
-                    <h1 class="-title display-1 mb-5 mt-2">{{ __('ui.Accedi') }}</h1>
+                    <h1 class="-title display-1 mb-5 mt-2 text-white">{{ __('ui.Accedi') }}</h1>
                 </div>
             </div>
 

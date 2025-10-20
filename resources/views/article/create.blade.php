@@ -5,7 +5,7 @@
             {{-- Titolo --}}
             <div class="row justify-content-center">
                 <div class="col-12">
-                    <h1 class="py-3 display-1 mb-5 mt-2">
+                    <h1 class="py-3 display-1 mb-5 mt-2 text-white">
                         {{ __('ui.Inserisciiltuoarticolo') }}
                     </h1>
                 </div>

@@ -5,7 +5,7 @@
       {{-- Titolo categoria --}}
       <div class="row justify-content-center align-items-center">
         <div class="col-12 pt-5">
-          <h1 class="py-5  display-1 mb-5 mt-2">
+          <h1 class="py-5  display-1 mb-5 mt-2 text-white">
             {{ __('ui.Articolidellacategoria') }}
             <span class="fst-italic fw-bold">{{ __('ui.' . Str::slug($category->name)) }}</span>
           </h1>
@@ -19,7 +19,7 @@
             <x-card :article="$article" class="card-transparent" />
           </div>
         @empty
-          <div class="py-5 ">
+          <div class="py-5 text-white ">
             <h3>{{ __('ui.Nonsonoancorastaticreatiarticoliperquestacategoria!') }}</h3>
             <a class="btn btn-dark my-5" href="{{ route('create.article') }}">
               {{ __('ui.Pubblicaunarticolo') }}

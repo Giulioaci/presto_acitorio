@@ -1,181 +1,113 @@
 <x-layout>
-    {{-- Stile per maggiore spaziatura tra sezioni --}}
-   
-    {{-- Sezione parallax estesa --}}
     <div class="parallax-section">
-        <div class="container text-center py-5">
-            <h1 class="-title display-1 custom-title-spacing">Shopping Online</h1>
-
-            {{-- Blocco principale: immagine e testo --}}
-            <div class="row justify-content-center align-items-center g-4 section-spacing">
-                <div class="col-md-6 d-flex align-items-center">
-                    <img src="{{ asset('storage/images/1.jpg') }}" 
-                         class="img-fluid rounded-top-4 shadow img-fade" 
-                         style="height: 300px; object-fit: cover;" 
+     <div class="">
+            {{-- Sezione 1 --}}
+            <div class="row justify-content-center g-0">
+                <div class="col-12 position-relative">
+                    <img src="{{ asset('storage/images/1.jpg') }}"
+                         class="img-fluid w-100 object-fit-cover"
+                         style="height: 500px;"
                          alt="Immagine principale">
-                </div>
-                <div class="col-md-6 d-flex flex-column justify-content-center">
-                    <h2 class="py-3 ">{{ __('ui.Scoprimigliaiadioffertesumisuraperiltuobusiness') }}</h2>
-                    <div class="row row-cols-2 g-4">
-                        <div class="col">
-                            <h3 class="text-black counter" data-target="200000000">0</h3>
-                            <p>{{ __('ui.prodotti') }}</p>
-                        </div>
-                        <div class="col">
-                            <h3 class="text-black counter" data-target="200000">0</h3>
-                            <p>{{ __('ui.fornitori') }}</p>
-                        </div>
-                        <div class="col">
-                            <h3 class="text-black counter" data-target="5900">0</h3>
-                            <p>{{ __('ui.categoriediprodotti') }}</p>
-                        </div>
-                        <div class="col">
-                            <h3 class="text-black counter" data-target="200">0</h3>
-                            <p>{{ __('ui.Paesieregioni') }}</p>
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center text-white p-4"
+                         style="background: rgba(0, 0, 0, 0.5);">
+                        <h2 class="mb-4">{{ __('ui.Scoprimigliaiadioffertesumisuraperiltuobusiness') }}</h2>
+                        <div class="row row-cols-2 g-4 text-white">
+                            <div class="col">
+                                <h3 class="counter" data-target="200000000">0</h3>
+                                <p>{{ __('ui.prodotti') }}</p>
+                            </div>
+                            <div class="col">
+                                <h3 class="counter" data-target="200000">0</h3>
+                                <p>{{ __('ui.fornitori') }}</p>
+                            </div>
+                            <div class="col">
+                                <h3 class="counter" data-target="5900">0</h3>
+                                <p>{{ __('ui.categoriediprodotti') }}</p>
+                            </div>
+                            <div class="col">
+                                <h3 class="counter" data-target="200">0</h3>
+                                <p>{{ __('ui.Paesieregioni') }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {{-- Altri blocchi immagine + testo --}}
-            <div class="row align-items-center section-spacing">
-                <div class="col-md-6 d-flex align-items-center">
-                    <img src="{{ asset('storage/images/1.jpeg') }}" 
-                         class="img-fluid rounded-top-4 shadow img-fade" 
-                         style="height: 300px; object-fit: cover;" 
+            {{-- Sezione 2 --}}
+            <div class="row justify-content-center g-0">
+                <div class="col-12 position-relative">
+                    <img src="{{ asset('storage/images/1.jpeg') }}"
+                         class="img-fluid w-100 object-fit-cover"
+                         style="height: 500px;"
                          alt="Immagine secondaria">
-                </div>
-                <div class="col-md-6 d-flex flex-column justify-content-center">
-                    <h3 class="">{{ __('ui.Piùdi50categorieperaiutartinellatuaricercaonline') }}</h3>
-                    <ul class="shopping-list">
-                        <li><i class="bi bi-bag-fill text-black me-2"></i>{{ __('ui.Nonhaitempopercercareconfrontareapriremilleschedeeperdertitrasitituttiuguali') }}</li>
-                        <li><i class="bi bi-bag-fill text-black me-2"></i>{{ __('ui.SuPrestoittrovioltre50categoriepensatepersemplificartilavita.') }}</li>
-                        <li><i class="bi bi-bag-fill text-black me-2"></i>{{ __('ui.Sonoordinateaggiornateeprogettateperguidartiesattamentedovevuoiandaresenzasprechiditempo.') }}</li>
-                    </ul>
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center text-white p-4"
+                         style="background: rgba(0, 0, 0, 0.5);">
+                        <h3 class="mb-3">{{ __('ui.Piùdi50categorieperaiutartinellatuaricercaonline') }}</h3>
+                        <ul class="shopping-list list-unstyled">
+                            <li class="mb-2"><i class="bi bi-bag-fill me-2"></i>{{ __('ui.Nonhaitempopercercareconfrontareapriremilleschedeeperdertitrasitituttiuguali') }}</li>
+                            <li class="mb-2"><i class="bi bi-bag-fill me-2"></i>{{ __('ui.SuPrestoittrovioltre50categoriepensatepersemplificartilavita.') }}</li>
+                            <li class="mb-2"><i class="bi bi-bag-fill me-2"></i>{{ __('ui.Sonoordinateaggiornateeprogettateperguidartiesattamentedovevuoiandaresenzasprechiditempo.') }}</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
             {{-- Gestione semplificata --}}
-            <div class="row align-items-stretch section-spacing">
-    {{-- Colonna immagine --}}
-    <div class="col-md-6 d-flex align-items-stretch">
-        <img src="{{ asset('storage/images/3.jpg') }}" 
-             class="img-fluid rounded-top-4 shadow img-fade w-100 h-100 object-fit-cover" 
-             alt="Gestione semplificata">
-    </div>
-
-    {{-- Colonna blocchi --}}
-    <div class="col-md-6 d-flex">
-        <div class="row g-4 align-self-stretch w-100 h-100">
-            <div class="col-12 col-sm-6">
-                <div class="p-3 shadow rounded bg-white h-100 d-flex flex-column">
-                    <div class="mb-2 text-black fs-3"><i class="bi bi-puzzle"></i></div>
-                    <h5 class="fw-bold">Una sola interfaccia</h5>
-                    <p class="mb-0 text-muted">da cui gestire tutti i marketplace e gli eCommerce, i fornitori ed i corrieri.</p>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6">
-                <div class="p-3 shadow rounded bg-white h-100 d-flex flex-column">
-                    <div class="mb-2 text-black fs-3"><i class="bi bi-funnel-fill"></i></div>
-                    <h5 class="fw-bold">Regole e filtri</h5>
-                    <p class="mb-0 text-muted">per gestire la pubblicazione di migliaia di prodotti, il prezzo ed il margine di guadagno.</p>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6">
-                <div class="p-3 shadow rounded bg-white h-100 d-flex flex-column">
-                    <div class="mb-2 text-black fs-3"><i class="bi bi-clock-history"></i></div>
-                    <h5 class="fw-bold">Risparmi tempo</h5>
-                    <p class="mb-0 text-muted">automatizzando la gestione di grandi volumi di prodotti, inserzioni e ordini.</p>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6">
-                <div class="p-3 shadow rounded bg-white h-100 d-flex flex-column">
-                    <div class="mb-2 text-black fs-3"><i class="bi bi-speedometer2"></i></div>
-                    <h5 class="fw-bold">Migliori le performance</h5>
-                    <p class="mb-0 text-muted">implementando in modo semplice strategie di vendita specifiche.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-         {{-- Chi siamo --}}
-<div class="row align-items-stretch section-spacing">
-    {{-- Colonna immagine --}}
-    <div class="col-md-6 d-flex align-items-stretch">
-        <img src="{{ asset('storage/images/4.jpg') }}" 
-             class="img-fluid rounded-top-4 shadow img-fade w-100 h-100 object-fit-cover" 
-             alt="Chi siamo">
-    </div>
-
-    {{-- Colonna testo + avatar --}}
-    <div class="col-md-6 d-flex flex-column justify-content-center">
-        <div class="d-flex flex-column justify-content-between h-100 p-3">
-            <div>
-                <h3 class="">Chi siamo</h3>
-                <p class="d-flex mt-3">
-                    <i class="bi bi-bag-fill text-black me-2"></i>
-                    <span class="flex-grow-1">
-                        Siamo una piattaforma pensata per rivoluzionare il modo in cui le aziende fanno shopping online. 
-                        Connettiamo fornitori e acquirenti in un ecosistema semplice, intuitivo e ricco di funzionalità avanzate. 
-                        Il nostro obiettivo è facilitare ogni fase del processo di acquisto, offrendo strumenti intelligenti 
-                        per risparmiare tempo, ottimizzare i costi e aumentare la competitività.
-                    </span>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-            {{-- Carousel articoli --}}
-            <h2 class="py-5 -title display-3 text-center section-spacing">{{ __('ui.ultimiarticolicaricati') }}</h2>
-
-            @if ($articles->count())
-                <div id="articlesCarousel" class="carousel slide section-spacing" data-bs-ride="carousel" data-bs-interval="1500">
-                    <div class="carousel-inner">
-                        @foreach ($articles as $index => $article)
-                            <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
-                                <div class="d-flex flex-column align-items-center">
-                                    <div class="col-10 col-md-4 col-lg-3 py-5">
-                                        <x-card :article="$article" class="card-transparent" />
-                                    </div>
-
-                                    <div class="text-center mb-3 rating-stars">
-                                        @for ($i = 1; $i <= 5; $i++)
-                                            @if ($i <= $article->rating)
-                                                <i class="bi bi-star-fill text-black fs-4 mx-1"></i>
-                                            @else
-                                                <i class="bi bi-star-fill text-black fs-4 mx-1"></i>
-                                            @endif
-                                        @endfor
+            <div class="row justify-content-center g-0">
+                <div class="col-12 position-relative">
+                    <img src="{{ asset('storage/images/3.jpg') }}"
+                         class="img-fluid w-100 object-fit-cover"
+                         style="height: 500px;"
+                         alt="Gestione semplificata">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center p-4"
+                         style="background: rgba(0, 0, 0, 0.6);">
+                        <div class="row w-100 text-white g-4">
+                            @foreach ([
+                                ['icon' => 'puzzle', 'title' => 'Una sola interfaccia', 'text' => 'da cui gestire tutti i marketplace e gli eCommerce, i fornitori ed i corrieri.'],
+                                ['icon' => 'funnel-fill', 'title' => 'Regole e filtri', 'text' => 'per gestire la pubblicazione di migliaia di prodotti, il prezzo ed il margine di guadagno.'],
+                                ['icon' => 'clock-history', 'title' => 'Risparmi tempo', 'text' => 'automatizzando la gestione di grandi volumi di prodotti, inserzioni e ordini.'],
+                                ['icon' => 'speedometer2', 'title' => 'Migliori le performance', 'text' => 'implementando in modo semplice strategie di vendita specifiche.']
+                            ] as $item)
+                                <div class="col-12 col-md-6">
+                                    <div class="p-3 shadow rounded bg-white bg-opacity-75 text-black h-100 d-flex flex-column">
+                                        <div class="mb-2 fs-3"><i class="bi bi-{{ $item['icon'] }}"></i></div>
+                                        <h5 class="fw-bold">{{ $item['title'] }}</h5>
+                                        <p class="mb-0">{{ $item['text'] }}</p>
                                     </div>
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        </div>
                     </div>
+                </div>
+            </div>
 
-                    <button class="carousel-control-prev" type="button" data-bs-target="#articlesCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#articlesCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+            {{-- Chi siamo --}}
+            <div class="row justify-content-center g-0">
+                <div class="col-12 position-relative">
+                    <img src="{{ asset('storage/images/4.jpg') }}"
+                         class="img-fluid w-100 object-fit-cover"
+                         style="height: 500px;"
+                         alt="Chi siamo">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center text-white p-4"
+                         style="background: rgba(0, 0, 0, 0.6);">
+                        <h3 class="mb-3">Chi siamo</h3>
+                        <p class="d-flex">
+                            <i class="bi bi-bag-fill me-2 fs-4"></i>
+                            <span>
+                                Siamo una piattaforma pensata per rivoluzionare il modo in cui le aziende fanno shopping online.
+                                Connettiamo fornitori e acquirenti in un ecosistema semplice, intuitivo e ricco di funzionalità avanzate.
+                                Il nostro obiettivo è facilitare ogni fase del processo di acquisto, offrendo strumenti intelligenti
+                                per risparmiare tempo, ottimizzare i costi e aumentare la competitività.
+                            </span>
+                        </p>
+                    </div>
                 </div>
-            @else
-                <div class="col-12 section-spacing">
-                    <h3 class="text-center py-5">{{ __('ui.nonsonoancorastaticreatiarticoli') }}</h3>
-                </div>
-            @endif
+            </div>
         </div>
     </div>
 </x-layout>
+
+
 
 
 

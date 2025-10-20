@@ -117,7 +117,7 @@ h3 {
 }
 
 .parallax-section {
-    background-color: #eff3f7cc; 
+    background-color: #212529; 
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -125,9 +125,12 @@ h3 {
 }
 
 .parallax-section img {
-    border-radius: 1rem; 
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3); 
     object-fit: cover;
 }
+
 
 .section-spacing {
             margin-top: 5rem;
@@ -163,10 +166,78 @@ h3 {
     border-color: #495057; 
 }
 
+.img-fixed-size {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+    object-position: center center;
+}
+
+ .shopping-title {
+            font-family: 'Montserrat';
+            font-weight: 10;
+            letter-spacing: 0.10em;
+            font-size: 5cqmax;
+            color: #000;
+            text-transform: uppercase;
+ }
+
+.shopping-titlel {
+            font-family: 'Montserrat';
+            font-weight: 50;
+            letter-spacing: 0.10em;
+            font-size: 3cqmax;
+            color: #000;
+            text-transform: uppercase;
+}
 
 
-  
-  
+
+div:not(#articlesCarousel) img {
+  transition: transform 0.9s ease;
+}
+
+div:not(#articlesCarousel) img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+ .parallax-section .row,
+ .parallax-section .col-12 {
+        margin: 0 !important;
+        padding: 0 !important;
+}
+
+  .parallax-section img {
+        display: block;
+        border: 2px solid transparent; 
+       
+       
+}
+
+  .shopping-title {
+        margin-bottom: 0;
+}
+
+  .carousel-inner {
+        margin: 0 !important;
+        padding: 0 !important;
+}
+
+.parallax-section {
+ margin-top: 0 !important;
+  padding-top: 0 !important;
+
+}
+        
+  nav.navbar {
+   margin-bottom: 0 !important;
+}
+
+
+
+
 
 
 

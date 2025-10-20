@@ -1,10 +1,10 @@
 <x-layout>
     <div class="parallax-section py-5">
         <div class="container">
-            <div class="row justify-content-center align-items-center py-5">
+            <div class="row justify-content-center align-items-center py-5 text-white">
 
                 {{-- Carousel immagine --}}
-                <div class="col-12 col-md-6 mb-3 d-flex align-items-center">
+                <div class="col-12 col-md-6 mb-3 d-flex align-items-center text-white">
                     @if ($article->images->count() > 0)
                         <div id="carouselExample" class="carousel slide w-100">
                             <div class="carousel-inner">
@@ -55,7 +55,7 @@
                         <button type="submit" class="btn btn-primary">Invia Messaggio</button>
                     </form>
 
-                    <div class="justify-content-center gap-3 mt-4 flex-wrap">
+                    <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
                         <a href="#" class="btn btn-danger btn-dark">Acquista</a>
                         <form action="" method="POST">
                             @csrf

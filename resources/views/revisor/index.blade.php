@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="parallax-section py-5">
+    <div class="parallax-section py-5 text-white">
         @if (session()->has('message'))
             <div class="row justify-content-center">
                 <div class="col-5 alert alert-success text-center shadow rounded">

@@ -1,4 +1,4 @@
-<div class="root-container"> 
+<div class="root-container text-white"> 
     <form wire:submit="store">
         @csrf
         @if (session()->has('success'))
