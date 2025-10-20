@@ -32,12 +32,12 @@
                 </div>
 
                 {{-- Contenuto articolo --}}
-                <div class="col-12 col-md-6 mb-3 d-flex flex-column justify-content-center text-center charming-title">
+                <div class="col-12 col-md-6 mb-3 d-flex flex-column justify-content-center text-center">
                     <h2 class="display-5">{{ $article->title }}</h2>
 
                     <div class="mb-3">
                         @for ($i = 0; $i < 5; $i++)
-                            <i class="bi bi-star-fill text-warning fs-4 mx-1"></i>
+                            <i class="bi bi-star-fill text-black fs-4 mx-1"></i>
                         @endfor
                     </div>
 
@@ -67,7 +67,7 @@
                 </div>
 
                 {{-- Area Recensioni --}}
-                <div class="col-12 mt-5 charming-title">
+                <div class="col-12 mt-5">
                     <h3 class="mb-4 text-center">{{ __('Recensioni degli utenti') }}</h3>
 
                     {{-- Lista recensioni --}}

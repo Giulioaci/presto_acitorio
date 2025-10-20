@@ -1,12 +1,12 @@
 <x-layout>
     <div class="parallax-section py-5">
         <div class="container my-5">
-            <h2 class="charming-title mb-4">I miei articoli</h2>
+            <h2 class="-title mb-4">I miei articoli</h2>
 
             @if($articles->isEmpty())
                 <p class="text-center text-muted">Non hai ancora pubblicato articoli.</p>
             @else
-                <ul class="list-group charming-title">
+                <ul class="list-group -title">
                     @foreach($articles as $article)
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div>

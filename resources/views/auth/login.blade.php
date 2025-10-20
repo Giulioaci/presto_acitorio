@@ -4,7 +4,7 @@
             {{-- Titolo --}}
             <div class="row justify-content-center">
                 <div class="col-12">
-                    <h1 class="charming-title display-1 mb-5 mt-2">{{ __('ui.Accedi') }}</h1>
+                    <h1 class="-title display-1 mb-5 mt-2">{{ __('ui.Accedi') }}</h1>
                 </div>
             </div>
 
@@ -22,10 +22,10 @@
                             <input type="password" class="form-control" id="password" name="password">
                         </div>
                         <div class="row">
-                            <div class="col-6 py-3 charming-title">
+                            <div class="col-6 py-3 -title">
                                 <button type="submit" class="btn btn-dark">{{ __('ui.Accedi') }}</button>
                             </div>
-                            <div class="col-6 py-3 charming-title">
+                            <div class="col-6 py-3 -title">
                                 <p><a href="{{ route('register') }}" class="btn btn-dark">{{ __('ui.Registrati') }}</a></p>
                             </div>
                         </div>

@@ -2,9 +2,9 @@
     <div class="parallax-section d-flex flex-column align-items-center justify-content-center min-vh-100">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-8 charming-title">
+                <div class="col-md-8 -title">
                     <div class="card shadow-lg border-0 rounded-4">
-                        <div class="card-header bg-dark text-white text-center rounded-top charming-title">
+                        <div class="card-header bg-dark text-white text-center rounded-top -title">
                             <h3 class="mb-0">Area Personale</h3>
                         </div>
                         <div class="card-body text-center">

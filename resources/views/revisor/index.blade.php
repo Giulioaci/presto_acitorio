@@ -11,7 +11,7 @@
         <div class="container-fluid pt-5">
             <div class="row py-5 justify-content-center align-items-center text-center">
                 <div class="col-3">
-                    <h1 class="py-4 charming-title">Revisor dashboard</h1>
+                    <h1 class="py-4 -title">Revisor dashboard</h1>
                 </div>
 
                 @if ($article_to_check)
@@ -29,7 +29,7 @@
                 @else
                     <div class="row justify-content-center align-items-center height-custom text-center">
                         <div class="col-12">
-                            <h1 class="py-4 charming-title">{{ __('ui.nessunarticolodarevisionare') }}</h1>
+                            <h1 class="py-4 -title">{{ __('ui.nessunarticolodarevisionare') }}</h1>
                             <a href="{{ route('homepage') }}" class="mt-5 btn btn-success">{{ __('ui.tornaallhomepage') }}</a>
                         </div>
                     </div>

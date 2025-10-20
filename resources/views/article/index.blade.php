@@ -4,14 +4,14 @@
       {{-- Titolo --}}
       <div class="row height-custom justify-content-center align-items-center">
         <div class="col-12">
-          <h1 class="charming-title display-1 mb-5 mt-2">{{ __('ui.AllArticles') }}</h1>
+          <h1 class="display-1 mb-5 mt-2">{{ __('ui.AllArticles') }}</h1>
         </div>
       </div>
 
       {{-- Lista articoli --}}
       <div class="row height-custom justify-content-center align-items-center py-5">
         @forelse ($articles as $article)
-          <div class="col-12 col-md-3 py-5 charming-title">
+          <div class="col-12 col-md-3 py-5">
             <x-card :article="$article" />
           </div>
         @empty

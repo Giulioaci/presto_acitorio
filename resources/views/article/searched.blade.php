@@ -5,7 +5,7 @@
             {{-- Titolo ricerca --}}
             <div class="row justify-content-center">
                 <div class="col-12">
-                    <h1 class="py-5 charming-title display-1 mb-5 mt-2">
+                    <h1 class="py-5 display-1 mb-5 mt-2">
                         {{ __('ui.Risultatiperlaricerca') }}
                         "<span class="fst-italic">{{ $query }}</span>"
                     </h1>
@@ -15,14 +15,14 @@
             {{-- Lista articoli --}}
             <div class="row justify-content-center align-items-center py-5">
                 @forelse ($articles as $article)
-                    <div class="col-12 col-md-3 py-5 charming-title">
+                    <div class="col-12 col-md-3 py-5">
                         <div class="card-transparent p-3 shadow rounded">
                             <x-card :article="$article" />
                         </div>
                     </div>
                 @empty
                     <div class="col-12">
-                        <h3 class="py-5 charming-title">
+                        <h3 class="py-5 ">
                             {{ __('ui.Nessunarticolocorrispondeallatuaricerca') }}
                         </h3>
                     </div>
