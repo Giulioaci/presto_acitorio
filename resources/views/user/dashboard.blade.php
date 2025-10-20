@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="d-flex flex-column align-items-center justify-content-center min-vh-100">
+    <div class="parallax-section d-flex flex-column align-items-center justify-content-center min-vh-100">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8 charming-title">
@@ -16,14 +16,17 @@
                                 <a href="{{ route('create.article') }}" class="btn btn-dark text-white">
                                     <i class="bi bi-plus-circle me-1"></i> Pubblica un articolo
                                 </a>
-                                <a href="{{ route('article.index') }}" class="btn btn-dark text-white">
-                                    <i class="bi bi-list-ul me-1"></i> I miei articoli
+                                <a href="{{ route('article.my') }}" class="btn btn-dark text-white">
+                                    <i class="bi bi-list-ul me-1"></i> I miei articoli caricati
                                 </a>
                                 @if ($user->is_revisor)
                                     <a href="{{ route('revisor.index') }}" class="btn btn-dark text-white">
                                         <i class="bi bi-shield-check me-1"></i> Area Revisore
                                     </a>
                                 @endif
+                                <a href="" class="btn btn-dark text-white">
+                                        <i class="bi bi-list-ul me-1"></i> I miei articoli preferiti
+                                    </a>
                             </div>
                         </div>
                         <div class="card-footer text-center bg-light rounded-bottom">
@@ -41,3 +44,4 @@
         </div>
     </div>
 </x-layout>
+

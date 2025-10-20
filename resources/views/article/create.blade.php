@@ -1,14 +1,25 @@
 <x-layout>
-    <div class="container-fluid vh-400">
-        <div class="row justify-content-center mt-5">
-            <div class="col-12">
-                <h1 class="py-3 charming-title">{{__('ui.Inserisciiltuoarticolo')}}</h1>
+    <div class="parallax-section">
+        <div class="container text-center py-5">
+
+            {{-- Titolo --}}
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <h1 class="py-3 charming-title display-1 mb-5 mt-2">
+                        {{ __('ui.Inserisciiltuoarticolo') }}
+                    </h1>
+                </div>
             </div>
-        </div>
-        <div class="row justify-content-center mt-5">
-            <div class="col-12 col-md-6">
-                <livewire:create-article-form />
+
+            {{-- Form --}}
+            <div class="row justify-content-center mt-5">
+                <div class="col-12 col-md-6">
+                    <div class="card-transparent p-4 shadow rounded">
+                        <livewire:create-article-form />
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
 </x-layout>

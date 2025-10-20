@@ -2,7 +2,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
+  <div class="container px-4">
  
     <a class="navbar-brand d-flex align-items-center" href="{{ route('homepage') }}">
       <i class="bi bi-cart-check fs-3 me-2"></i>

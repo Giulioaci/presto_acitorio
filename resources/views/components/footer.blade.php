@@ -1,11 +1,11 @@
 <footer class="bg-dark text-white pt-2 pb-1">
- <div class="container">
+ <div class="container px-4">
     <div class="row">
       <div class="col-md-4 mb-3">
         <h5>Presto.it</h5>
       <div>
         <h6>{{__('ui.vuoilavorareconnoi')}}</h6>
-       <a href="{{ route('become.revisor') }}" class="btn btn-primary">{{__('ui.Diventarevisore')}}</a>
+       <a href="{{ route('become.revisor') }}" class="btn btn-dark text-white border border-white">{{__('ui.Diventarevisore')}}</a>
       </div>
       </div>
 
@@ -24,7 +24,7 @@
         <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
         <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
       </div>
-    </div>
+</div>
 </footer>
 
 

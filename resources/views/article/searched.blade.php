@@ -1,27 +1,42 @@
 <x-layout>
-    <div class="container-fluid ">
-        <div class="row py-5 justify-content-center align-items-center text-center">
-            <div class="col-12">
-                <h1 class="py-5 charming-title">{{__('ui.Risultatiperlaricerca')}}"<span class="fst-italic">{{ $query }}</span>"</h1>
-            </div>
-        </div>
-        <div class="row height-custom justify-content-center align-items-center py-5">
-            @forelse ($articles as $article)
-                <div class="col-12 col-md-3 py-5 charming-title">
-                    <x-card :article="$article" />
-                </div>
-            @empty
+    <div class="parallax-section">
+        <div class="container text-center py-5">
+
+            {{-- Titolo ricerca --}}
+            <div class="row justify-content-center">
                 <div class="col-12">
-                    <h3 class="py-5 charming-title">
-                        {{__('ui.Nessunarticolocorrispondeallatuaricerca')}}
-                    </h3>
+                    <h1 class="py-5 charming-title display-1 mb-5 mt-2">
+                        {{ __('ui.Risultatiperlaricerca') }}
+                        "<span class="fst-italic">{{ $query }}</span>"
+                    </h1>
                 </div>
-            @endforelse
-        </div>
-        <div class="d-flex justify-content-center">
-            <div>
-                {{ $articles->links() }}
             </div>
+
+            {{-- Lista articoli --}}
+            <div class="row justify-content-center align-items-center py-5">
+                @forelse ($articles as $article)
+                    <div class="col-12 col-md-3 py-5 charming-title">
+                        <div class="card-transparent p-3 shadow rounded">
+                            <x-card :article="$article" />
+                        </div>
+                    </div>
+                @empty
+                    <div class="col-12">
+                        <h3 class="py-5 charming-title">
+                            {{ __('ui.Nessunarticolocorrispondeallatuaricerca') }}
+                        </h3>
+                    </div>
+                @endforelse
+            </div>
+
+            {{-- Paginazione --}}
+            <div class="d-flex justify-content-center">
+                <div>
+                    {{ $articles->links() }}
+                </div>
+            </div>
+
         </div>
     </div>
 </x-layout>
+
